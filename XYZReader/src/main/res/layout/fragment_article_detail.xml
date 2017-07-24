@@ -9,7 +9,7 @@
         android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimaryLight"
         android:fitsSystemWindows="true">
 
         <android.support.design.widget.AppBarLayout
@@ -28,14 +28,14 @@
                 <FrameLayout
                     android:id="@+id/photo_container"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@color/photo_placeholder">
                     <!--suppress AndroidLintContentDescription -->
 
                     <ImageView
                         android:id="@+id/photo"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="400dp"
                         android:scaleType="centerCrop" />
                 </FrameLayout>
 
@@ -72,6 +72,12 @@
                         android:textColor="#8fff" />
                 </LinearLayout>
 
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
 
             </android.support.design.widget.CollapsingToolbarLayout>
@@ -105,7 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="250dp"
+                    android:layout_marginTop="@dimen/detail_card_top_margin"
                     android:background="#fff"
                     android:elevation="2dp"
                     android:maxWidth="@dimen/detail_card_max_width"
