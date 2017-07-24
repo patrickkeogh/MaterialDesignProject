@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.text.Html;
@@ -123,8 +124,13 @@ public class ArticleDetailFragment extends Fragment implements
             @Override
             public void onInsetsChanged(Rect insets) {
                 mTopInset = insets.top;
+
+
             }
         });
+
+        // Added but not sure how to set it with a back button
+        //((CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar)).setTitle("Eclairs");
 
         mScrollView = (ObservableScrollView) mRootView.findViewById(R.id.scrollview);
         mScrollView.setCallbacks(new ObservableScrollView.Callbacks() {
