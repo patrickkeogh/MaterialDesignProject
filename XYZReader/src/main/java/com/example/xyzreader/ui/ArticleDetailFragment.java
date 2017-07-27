@@ -131,10 +131,8 @@ public class ArticleDetailFragment extends Fragment implements
         mCToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar);
 
         // Define the collapsing toolbar title text color
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            mCToolbarLayout.setCollapsedTitleTextColor(ContextCompat.getColor(getContext(), R.color.colorWhite));
-            mCToolbarLayout.setExpandedTitleColor(ContextCompat.getColor(getContext(), R.color.colorWhite));
-        }
+        mCToolbarLayout.setCollapsedTitleTextColor(ContextCompat.getColor(getActivity(), R.color.colorWhite));
+        mCToolbarLayout.setExpandedTitleColor(ContextCompat.getColor(getActivity(), R.color.colorWhite));
 
         AppBarLayout appBarLayout = (AppBarLayout) mRootView.findViewById(R.id.appbar_layout);
 
